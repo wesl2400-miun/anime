@@ -99,6 +99,7 @@
   padding: 0;
   background-color: #ffffff;
   padding: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -207,6 +208,149 @@ main {
 @media (prefers-color-scheme: dark) {
   #gallery {
     background-color: #353535;
+  }
+}
+@keyframes text1 {
+  from {
+    width: 0;
+    opacity: 0;
+    transform: translateX(100%) scale(2);
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes text2 {
+  from {
+    color: #CFCFCF;
+    width: 0;
+  }
+  to {
+    color: #353535;
+    width: 100%;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  @keyframes text2 {
+    from {
+      color: #353535;
+      width: 0;
+    }
+    to {
+      color: #CFCFCF;
+      width: 100%;
+    }
+  }
+}
+.text-anime1 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-style: italic;
+  animation: 2s linear text1;
+  transition: all 1s ease-out;
+}
+
+.text-anime2 {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: 4s linear text2;
+  transition: all 2s ease-in;
+}
+
+.btn-anime {
+  cursor: pointer;
+}
+.btn-anime:hover {
+  animation: 1s linear btn-hover infinite;
+  transition: color 1s ease-in-out;
+}
+
+@keyframes btn-hover {
+  from {
+    transform: scale(1);
+    background-color: #353535;
+  }
+  to {
+    transform: scale(1);
+    background-color: #353535;
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: #294285;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  @keyframes btn-hover {
+    from {
+      background-color: #CFCFCF;
+    }
+    to {
+      background-color: #CFCFCF;
+    }
+    50% {
+      background-color: #FFFF9E;
+    }
+  }
+}
+@keyframes image {
+  from {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(-1) scale3d(0.3, 0.7, 1);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.image-anime img {
+  animation: 2s linear image;
+  transition: all 5s ease-out;
+}
+
+@keyframes football {
+  from {
+    transform: translateX(0) rotate(0);
+  }
+  50% {
+    transform: translateX(280px) rotate(360deg);
+  }
+  to {
+    transform: translateX(0) rotate(-200deg);
+  }
+}
+.football-anime {
+  animation: 1s linear football;
+  transition: color 2s ease-in;
+}
+
+.btn-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.btn-wrapper button {
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  padding: 0.2rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-top: 1rem;
+  background-color: #353535;
+  color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn-wrapper button {
+    background-color: #CFCFCF;
+    color: #353535;
   }
 }
 body {

@@ -28,4 +28,7 @@ export class Picture {
     img.height = '100';
     img.fetchPriority = 'high';
   }
+
+  // Returnerar Picture-elementet
+  root = () => this._root;
 }
