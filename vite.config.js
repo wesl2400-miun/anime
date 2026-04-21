@@ -14,7 +14,8 @@ export default defineConfig({
       input: {
         main: 'index.html',
         gallery: 'gallery.html',
-        workflow: 'sass.html'
+        workflow: 'sass.html',
+        animering: 'animering.html'
       }
     }
   },
