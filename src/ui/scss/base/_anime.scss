@@ -90,12 +90,15 @@
 @media (prefers-color-scheme: dark) {
   @keyframes btn-hover {
     from {
+      transform: scale(1);
       @include colors.background('accent', 'dark');
     }
     to {
+      transform: scale(1);
       @include colors.background('accent', 'dark');
     }
     50% {
+      transform: scale(1.2);
       @include colors.background('accent-variant', 'dark');
     }
   }
