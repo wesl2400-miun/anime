@@ -285,12 +285,15 @@ main {
 @media (prefers-color-scheme: dark) {
   @keyframes btn-hover {
     from {
+      transform: scale(1);
       background-color: #CFCFCF;
     }
     to {
+      transform: scale(1);
       background-color: #CFCFCF;
     }
     50% {
+      transform: scale(1.2);
       background-color: #FFFF9E;
     }
   }
@@ -323,10 +326,16 @@ main {
   }
 }
 .football-anime {
+  color: #353535;
   animation: 1s linear football;
   transition: color 2s ease-in;
 }
 
+@media (prefers-color-scheme: dark) {
+  .football-anime {
+    color: #CFCFCF;
+  }
+}
 .btn-wrapper {
   width: 100%;
   box-sizing: border-box;

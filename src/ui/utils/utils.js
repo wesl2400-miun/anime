@@ -27,3 +27,8 @@ export const picture = (img, alt, parent) => {
   pic.addFallback(img[last], alt);
   return pic;
 }
+
+// Lägger till en svg-bild dynamiskt (Respekterar nattläge)
+export const addSvg = (parent, svg) => {
+  parent.innerHTML = svg;
+}

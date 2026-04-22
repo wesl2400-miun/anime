@@ -144,6 +144,14 @@
 
 // Klassen som startar animationen för fotbollbilden
 .football-anime {
+  @include colors.foreground('accent', 'light');
   animation: 1s linear football;
   transition: color 2s ease-in;
+}
+
+// Nattläget för klassen som startar animationen för fotbollbilden
+@media (prefers-color-scheme: dark) {
+  .football-anime {
+    @include colors.foreground('accent', 'dark');
+  }
 }
